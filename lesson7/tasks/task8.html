@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/script.js"></script>
+  <title>Document</title>
+</head>
+<style>
+  div {
+    text-align: center;
+    line-height: 1;
+  }
+</style>
+
+<body>
+
+</body>
+<script>
+  //  Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання, куди переходимо при кліку на зображення (тег img повине знаходитись у середині тега a: <a> <img src=”шлях”> </a>
+
+  function getBanner(img, title, link) {
+    const randomNum = Math.floor(Math.random() * 4)
+    document.write(`
+      <div>
+        <a href="${link}"><img src="${img}"></a>
+        <h1>${title}</h1>
+      </div>
+    `)
+  }
+  const banner = getBanner("../img/google.png", "Google", "https://www.google.com")
+</script>
+
+</html>

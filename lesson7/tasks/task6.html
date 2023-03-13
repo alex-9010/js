@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/script.js"></script>
+  <title>Document</title>
+</head>
+
+<style>
+  body {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    line-height: 1.2;
+  }
+
+  table,
+  tr,
+  td {
+    border: 1px solid #000;
+  }
+</style>
+
+<body></body>
+<script>
+  // Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця заповнюється заданим фіксованим повідомленням).
+  function getTable(maxRows, maxColumns, text) {
+    document.write(`<table>`);
+    for (let j = 0; j < maxRows; j++) {
+      document.write(`<tr>`);
+      for (let i = 0; i < maxColumns; i++) {
+        document.write(`<td>${text}</td>`);
+      }
+      document.write(`</tr>`);
+    }
+    document.write(`</table>`);
+  }
+  const maxRows = parseInt(prompt('Введіть к-ть рядкі'));
+  const maxColumns = parseInt(prompt('Введіть к-ть колонок'));
+  const text = prompt('Введіть текст повідомлення')
+  const table = getTable(maxRows, maxColumns, text)
+</script>
+
+</html>

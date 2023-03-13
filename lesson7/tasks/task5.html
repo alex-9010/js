@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/script.js"></script>
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+</style>
+
+<body></body>
+<script>
+  //  Створити окремі функції, які переводять:
+  // Сантиметри у дюйми;
+  // Кілограми у фунти;
+  // Кілометри у милі.
+
+  function cmToInch(num) {
+    return (num * 0.39370)
+  }
+  function kgToPound(num) {
+    return (num * 2.2046)
+  }
+  function kmToMile(num) {
+    return (num * 0.62137)
+  }
+  const num = parseInt(prompt('Введіть число'))
+  document.write(`
+  <p>${(num)} cm = ${cmToInch(num)} in</p>
+  <p>${(num)} kg = ${kgToPound(num)} lb</p>
+  <p>${(num)} km = ${kmToMile(num)} mi</p>
+  `)
+</script>
+
+</html>

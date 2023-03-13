@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/script.js"></script>
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-size: 3rem;
+  }
+</style>
+
+<body></body>
+<script>
+  // Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.
+
+  let result
+  function getSeason(monthNum) {
+    switch (monthNum) {
+      case 12:
+      case 1:
+      case 2: result = "Зима"
+        break
+      case 3:
+      case 4:
+      case 5: result = "Весна"
+        break
+      case 6:
+      case 7:
+      case 8: result = "Літо"
+        break
+      case 9:
+      case 10:
+      case 11: result = "Осінь"
+        break
+      default: result = "Ви ввели не правильне число"
+        break
+    }
+    return result
+  }
+  const monthNum = parseInt(prompt(`Задайте номер місяця`, 1));
+  const season = getSeason(monthNum)
+  document.write(season)
+</script>
+
+</html>

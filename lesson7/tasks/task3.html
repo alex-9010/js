@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/script.js"></script>
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+</style>
+
+<body></body>
+<script>
+  //  Створити окремі функції, які для 4 чисел знаходять:
+  // 1) суму;
+  // 2) добуток;
+  // 3)середнє арифметичне;
+  // 4)мінімальне значення. 
+
+  function sum(num1, num2, num3, num4) {
+    return (num1 + num2 + num3 + num4)
+  }
+  function product(num1, num2, num3, num4) {
+    return (num1 * num2 * num3 * num4)
+  }
+  function averageScore(num1, num2, num3, num4) {
+    return (num1 + num2 + num3 + num4) / 4
+  }
+  function minNum(num1, num2, num3, num4) {
+    let minNum = Infinity
+    for (let i = 0; i < 4; i++) {
+      if (minNum > arguments[i]) minNum = arguments[i]
+    }
+    return minNum
+  }
+  const num1 = parseInt(prompt('Введіть перше число'))
+  const num2 = parseInt(prompt('Введіть друге число'))
+  const num3 = parseInt(prompt('Введіть третє число'))
+  const num4 = parseInt(prompt('Введіть четверте число'))
+  document.write(`
+  <p>Сума = ${sum(num1, num2, num3, num4)}</p>
+  <p>Добуток = ${product(num1, num2, num3, num4)}</p>
+  <p>Середнє арифметичне = ${averageScore(num1, num2, num3, num4)}</p>
+  <p>Мінімальне значення = ${minNum(num1, num2, num3, num4)}</p>
+  `)
+</script>
+
+</html>
